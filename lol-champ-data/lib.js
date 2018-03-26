@@ -28,3 +28,11 @@ function getCorrelation(xArray, yArray) {
   // console.log(r, m, b);
   return {r: r, m: m, b: b};
 }
+
+function getPhoto(name) {
+  return "http://ddragon.leagueoflegends.com/cdn/8.6.1/img/champion/"+name+".png";
+}
+
+function getUrl(name) {
+  return "https://lol.garena.tw/game/champion/"+name;
+}

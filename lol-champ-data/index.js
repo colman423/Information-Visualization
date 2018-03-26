@@ -2,11 +2,13 @@ $.getJSON("https://colman423.github.io/Information-Visualization/lol-champ-data/
 
   var svg = d3.select('div#chart-container').append('svg').attr('width', 1000).attr('height', 600);
   var chart = svg.append('g').attr('id', 'chart');
+  var pointContainer = svg.append('g').attr('id', 'point-container');
 
-  chart.append('text').attr({'class': 'label', 'id': 'name', 'x': 70, 'y': 40});
-  chart.append('text').attr({'class': 'label', 'id': 'win', 'x': 70, 'y': 80});
-  chart.append('text').attr({'class': 'label', 'id': 'ban', 'x': 70, 'y': 120});
-  chart.append('text').attr({'class': 'label', 'id': 'pick', 'x': 70, 'y': 160});
+  chart.append('text').attr({'class': 'info', 'id': 'name', 'x': 550, 'y': 40});
+  chart.append('text').attr({'class': 'info', 'id': 'win', 'x': 550, 'y': 80});
+  chart.append('text').attr({'class': 'info', 'id': 'ban', 'x': 550, 'y': 120});
+  chart.append('text').attr({'class': 'info', 'id': 'pick', 'x': 550, 'y': 160});
+  chart.append('svg:image').attr({'class': 'info', 'id': 'photo', 'x': 750, 'y': 50});
 
   chart.append('g').attr({'id': 'xAxis', 'transform': 'translate(0, 540)'});
   chart.append('g').attr('id', 'yAxis').attr('transform', 'translate(65, 0)');
@@ -64,41 +66,38 @@ $.getJSON("https://colman423.github.io/Information-Visualization/lol-champ-data/
     });
 
     if(init) {
-      chart.selectAll('circle').data(data).enter().append('circle').attr('r', pointSize).style('cursor', 'pointer')
+      pointContainer.selectAll('circle').data(data).enter().append('circle').attr('r', pointSize).style('cursor', 'pointer')
       .attr('cx', function(d) {
-        console.log(d);
         return xScale(d[xAxis]);
       }).attr('cy', function(d) {
         return yScale(d[yAxis]);
       }).attr('fill', function(d, i) {
         return pointColor(i);
       }).on('click', function(d) {
-        window.open("https://lol.garena.tw/game/champion/"+d.en);
+        window.open(getUrl(d.en));
       }).on('mouseover', function(d) {
         chart.select('#name').text(d.name+" "+d.en).transition().style('opacity', 1);
         chart.select('#win').text("勝率: "+d.win+"%").transition().style('opacity', 1);
         chart.select('#ban').text("禁用率: "+d.ban+"%").transition().style('opacity', 1);
         chart.select('#pick').text("出場率: "+d.pick+"%").transition().style('opacity', 1);
+        chart.select('#photo').attr('xlink:href', getPhoto(d.en)).transition().style('opacity', 1);
       }).on('mouseout', function(d) {
-        chart.select('#name').transition().duration(1000).style('opacity', 0);
-        chart.select('#win').transition().duration(1000).style('opacity', 0);
-        chart.select('#ban').transition().duration(1000).style('opacity', 0);
-        chart.select('#pick').transition().duration(1000).style('opacity', 0);
+        chart.selectAll('.info').transition().duration(1000).style('opacity', 0);
       }).append("svg:title").text(function(d) { return d.name; });
     }
     else {
-      chart.selectAll('circle')
+      pointContainer.selectAll('circle')
       .attr('cx', function(d) {
         return xScale(d[xAxis]);
       }).attr('cy', function(d) {
         return yScale(d[yAxis]);
       });
     }
+    updateCorrelation();
   }
-
   function updateCorrelation() {
-    var xArray = _.map(data, function(d) {return d[xAxis];});
-    var yArray = _.map(data, function(d) {return d[yAxis];});
+    var xArray = _.map(data, function(d) {return parseInt(d[xAxis]);});
+    var yArray = _.map(data, function(d) {return parseInt(d[yAxis]);});
     var c = getCorrelation(xArray, yArray);
     var x1 = xScale.domain()[0], y1 = c.m * x1 + c.b;
     var x2 = xScale.domain()[1], y2 = c.m * x2 + c.b;
@@ -108,7 +107,7 @@ $.getJSON("https://colman423.github.io/Information-Visualization/lol-champ-data/
     .style('opacity', 0)
     .attr({'x1': xScale(x1), 'y1': yScale(y1), 'x2': xScale(x2), 'y2': yScale(y2)})
     .transition()
-    .duration(1500)
+    .duration(200)
     .style('opacity', 1);
   }
 
