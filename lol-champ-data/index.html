@@ -1,0 +1,62 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>英雄聯盟 勝率、禁用率、使用率關係圖</title>
+  <style>
+  .label {
+    font-size: 30px;
+    font-family:sans-serif;
+    font-weight: bold;
+    fill: green;
+  }
+  body {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-family:sans-serif;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>x軸</h3>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary btn-axis btn-xAxis" rel="win">勝率</button>
+          <button type="button" class="btn btn-primary active btn-axis btn-xAxis" rel="ban">禁用率</button>
+          <button type="button" class="btn btn-primary btn-axis btn-xAxis" rel="pick">使用率</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>y軸</h3>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary active btn-axis btn-yAxis" rel="win">勝率</button>
+          <button type="button" class="btn btn-primary btn-axis btn-yAxis" rel="ban">禁用率</button>
+          <button type="button" class="btn btn-primary btn-axis btn-yAxis" rel="pick">使用率</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-md-10">
+      <div id="chart-container">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="footer">
+    <a href="https://www.leagueofgraphs.com/zh/champions/stats" target="_blank">資料來源</a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://d3js.org/d3.v3.js"></script>
+  <script src="./data.js"></script>
+  <script src="./lib.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
