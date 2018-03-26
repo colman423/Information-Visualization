@@ -1,4 +1,4 @@
-var localData = [{"name": "亞歷斯塔", "win": "50.6", "ban": "13.1", "pick": "11.3", "en": "Alistar"},
+[{"name": "亞歷斯塔", "win": "50.6", "ban": "13.1", "pick": "11.3", "en": "Alistar"},
 {"name": "伊澤瑞爾", "win": "49.1", "ban": "6.3", "pick": "24.7", "en": "Ezreal"},
 {"name": "伊瑞莉雅", "win": "48.1", "ban": "2.5", "pick": "4.8", "en": "Irelia"},
 {"name": "伊羅旖", "win": "50.9", "ban": "10.1", "pick": "4.8", "en": "Illaoi"},

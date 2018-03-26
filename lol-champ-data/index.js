@@ -1,16 +1,16 @@
 var data;
 
-// // get data
-// if (document.location.host) {
-//   // on website
-//   $.getJSON("./data.json", function(d) {
-//     data = d;
-//   });
-// }
-// else {
+// get data
+if (document.location.host) {
+  // on website
+  $.getJSON("./data.json", function(d) {
+    data = d;
+  });
+}
+else {
   // on local host
   data = localData;
-// }
+}
 
 var svg = d3.select('div#chart-container').append('svg').attr('width', 1000).attr('height', 600);
 var chart = svg.append('g').attr('id', 'chart');
