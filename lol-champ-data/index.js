@@ -1,27 +1,28 @@
 $.getJSON("https://colman423.github.io/Information-Visualization/lol-champ-data/data.json", function(data) {
-
-  var svg = d3.select('div#chart-container').append('svg').attr('width', 1000).attr('height', 600);
+  var w = $('#chart-container').width();
+  console.log(w);
+  var svg = d3.select('div#chart-container').append('svg').attr('width', w).attr('height', w*0.63);
   var chart = svg.append('g').attr('id', 'chart');
   var pointContainer = svg.append('g').attr('id', 'point-container');
 
-  chart.append('text').attr({'class': 'info', 'id': 'name', 'x': 550, 'y': 40});
-  chart.append('text').attr({'class': 'info', 'id': 'win', 'x': 550, 'y': 80});
-  chart.append('text').attr({'class': 'info', 'id': 'ban', 'x': 550, 'y': 120});
-  chart.append('text').attr({'class': 'info', 'id': 'pick', 'x': 550, 'y': 160});
-  chart.append('svg:image').attr({'class': 'info', 'id': 'photo', 'x': 750, 'y': 50});
+  chart.append('text').attr({'class': 'info', 'id': 'name', 'x': w*0.55, 'y': 40});
+  chart.append('text').attr({'class': 'info', 'id': 'win', 'x': w*0.55, 'y': 80});
+  chart.append('text').attr({'class': 'info', 'id': 'ban', 'x': w*0.55, 'y': 120});
+  chart.append('text').attr({'class': 'info', 'id': 'pick', 'x': w*0.55, 'y': 160});
+  chart.append('svg:image').attr({'class': 'info', 'id': 'photo', 'x': w*0.75, 'y': 50});
 
-  chart.append('g').attr({'id': 'xAxis', 'transform': 'translate(0, 540)'});
+  chart.append('g').attr({'id': 'xAxis', 'transform': 'translate(0, '+w*0.568+')'});
   chart.append('g').attr('id', 'yAxis').attr('transform', 'translate(65, 0)');
   chart.append('line').attr('id', 'bestfit');
-  chart.append('text').attr({'id': "xLabel", 'x': "500", 'y': "580", 'text-anchor': "middle"}).text('禁用率');
-  chart.append('text').attr({'id': "yLabel", 'text-anchor': "middle", 'transform': 'translate(20, 330)rotate(-90)'}).text('勝率');
+  chart.append('text').attr({'id': "xLabel", 'x': "500", 'y': w*0.6, 'text-anchor': "middle"}).text('禁用率');
+  chart.append('text').attr({'id': "yLabel", 'text-anchor': "middle", 'transform': 'translate(15, 330)rotate(-90)'}).text('勝率');
 
   var margin = {top: 20, right: 20, bottom: 50, left: 70};
   var width = +svg.attr("width") - margin.left - margin.right;
   var height = +svg.attr("height") - margin.top - margin.bottom;
   var pointColor = d3.scale.category20b(), pointSize = 8;
 
-  var xAxis = "ban", yAxis = "win";
+  var xAxis = "win", yAxis = "ban";
   var domain = {
     'ban': [0, 50],
     'win': [44, 56],
