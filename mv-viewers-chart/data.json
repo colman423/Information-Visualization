@@ -54,7 +54,7 @@
         {
           "label": "album",
           "name": "范特西",
-          "song": [
+          "children": [
             {
               "name": "愛在西元前",
               "viewers": 542
@@ -100,7 +100,7 @@
         {
           "label": "album",
           "name": "八度空間",
-          "song": [
+          "children": [
             {
               "name": "半獸人",
               "viewers": 196
@@ -146,7 +146,7 @@
         {
           "label": "album",
           "name": "葉惠美",
-          "song": [
+          "children": [
             {
               "name": "以父之名",
               "viewers": 390
@@ -196,7 +196,7 @@
         {
           "label": "album",
           "name": "七里香",
-          "song": [
+          "children": [
             {
               "name": "我的地盤",
               "viewers": 105
@@ -242,7 +242,7 @@
         {
           "label": "album",
           "name": "11月的蕭邦",
-          "song": [
+          "children": [
             {
               "name": "夜曲",
               "viewers": 1657
@@ -296,7 +296,7 @@
         {
           "label": "album",
           "name": "依然范特西",
-          "song": [
+          "children": [
             {
               "name": "夜的第七章",
               "viewers": 627
@@ -342,7 +342,7 @@
         {
           "label": "album",
           "name": "我很忙",
-          "song": [
+          "children": [
             {
               "name": "牛仔很忙",
               "viewers": 217
@@ -388,7 +388,7 @@
         {
           "label": "album",
           "name": "魔杰座",
-          "song": [
+          "children": [
             {
               "name": "龍戰騎士",
               "viewers": 182
@@ -438,7 +438,7 @@
         {
           "label": "album",
           "name": "跨時代",
-          "song": [
+          "children": [
             {
               "name": "跨時代",
               "viewers": 177
@@ -488,7 +488,7 @@
         {
           "label": "album",
           "name": "驚嘆號",
-          "song": [
+          "children": [
             {
               "name": "驚嘆號",
               "viewers": 357
@@ -538,7 +538,7 @@
         {
           "label": "album",
           "name": "12新作",
-          "song": [
+          "children": [
             {
               "name": "四季列車",
               "viewers": 58
@@ -592,7 +592,7 @@
         {
           "label": "album",
           "name": "哎呦，不錯哦",
-          "song": [
+          "children": [
             {
               "name": "陽明山",
               "viewers": 522
@@ -646,7 +646,7 @@
         {
           "label": "album",
           "name": "周杰倫的床邊故事",
-          "song": [
+          "children": [
             {
               "name": "床邊故事",
               "viewers": 1107
