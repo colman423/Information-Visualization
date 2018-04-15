@@ -1,9 +1,11 @@
 body {
+  background-color: #ccc;
   text-align: center;
+  font-family: 微軟正黑體;
   font-size: 16px;
 }
 rect.background {
-  fill: white;
+  fill: #ccc;
 }
 .axis {
   shape-rendering: crispEdges;
@@ -16,7 +18,6 @@ rect.background {
 .label {
   text-anchor: middle;
   font-size: 22px;
-  font-family: 微軟正黑體;
   font-weight: bold;
   fill: #5151A2;
 }
