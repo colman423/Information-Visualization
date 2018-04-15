@@ -1,5 +1,6 @@
 body {
-  margin-bottom: 500px;
+  text-align: center;
+  font-size: 16px;
 }
 rect.background {
   fill: white;

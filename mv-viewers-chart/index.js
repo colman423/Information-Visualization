@@ -1,6 +1,6 @@
 var margin = {top: 40, right: 100, bottom: 0, left: 175},
 width = 1200 - margin.left - margin.right,
-height = 600 - margin.top - margin.bottom;
+height = 550 - margin.top - margin.bottom;
 
 var y = d3.scale.linear()
 .range([0, height-100]);
@@ -26,7 +26,7 @@ var yAxisNeg = d3.svg.axis()
 .scale(yNeg)
 .orient("left");
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#svg")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
@@ -42,7 +42,7 @@ svg.append("rect")
 svg.append("text")
 .attr({
   'text-anchor': "middle",
-  'transform': `translate(-100, ${height*0.5})`,
+  'transform': `translate(-120, ${height*0.5})`,
   'class': 'label',
   'id': "x-label",
 })
@@ -50,7 +50,7 @@ svg.append("text")
 svg.append("text")
 .attr({
   'text-anchor': "middle",
-  'transform': `translate(-100, ${height*0.5+30})`,
+  'transform': `translate(-120, ${height*0.5+30})`,
   'class': 'label',
 })
 .html("(萬人)");
@@ -68,13 +68,13 @@ svg.append("g")
 
 svg.append("g")
 .attr("class", "x axis")
-.attr("transform", `translate(0, ${height*0.82})`)
+.attr("transform", `translate(0, ${height*0.803})`)
 .append("line")
-.attr("x1", "80%");
+.attr("x1", "100%");
 
 d3.json("https://colman423.github.io/Information-Visualization/mv-viewers-chart/data.json", function(error, root) {
   if (error) throw error;
-  console.log(root);
+  // console.log(root);
 
   partition.nodes(root);
   y.domain([0, root.value]).nice();
@@ -83,8 +83,8 @@ d3.json("https://colman423.github.io/Information-Visualization/mv-viewers-chart/
 });
 
 function down(d, i) {
-  console.log(d);
-  console.log(i);
+  // console.log(d);
+  // console.log(i);
   if (!d.children || this.__transition__) return;
   var end = duration + d.children.length * delay;
 
@@ -157,8 +157,8 @@ function down(d, i) {
 }
 
 function up(d, i) {
-  console.log(d);
-  console.log(i);
+  // console.log(d);
+  // console.log(i);
   if (!d.parent || this.__transition__) return;
   var end = duration + d.children.length * delay;
 
@@ -194,8 +194,6 @@ function up(d, i) {
   // var enterTransition = enter.transition()
   // .duration(duration)
   // .style("opacity", 1);
-  // console.log(enter);
-  // console.log(enterTransition);
   // // Transition entering rects to the new y-scale.
   // // When the entering parent rect is done, make it visible!
   // enterTransition.select("rect")
@@ -247,7 +245,7 @@ function bar(d) {
   .attr("y", height-60)
   .attr("x", barHeight / 2)
   .attr("dx", ".35em")
-  .attr("transform", "translate(310, 80)rotate(40)")
+  .attr("transform", "translate(280, 70)rotate(40)")
   // .style("text-anchor", "end")
   .attr("font-family", "Comic Sans MS")
   .attr('font-weight', "bold")
@@ -257,21 +255,8 @@ function bar(d) {
   .attr("width", barHeight)
   .attr("y", function(d) { return yNeg(d.value); })
   .attr("height", function(d) { return y(d.value); })
-  .on("mouseover", function(d){
-    var yPosition = d3.event.pageY + 10;
-    var xPosition = d3.event.pageX + 10;
-
-    d3.select("#tooltip")
-    .style("left", xPosition + "px")
-    .style("top", yPosition + "px")
-    //.select("#value")
-    .html("<font face='微軟正黑體'><b>總數: </b></font>" + "<font face='Comic Sans MS'>" + d.value + "</font>");
-    //.text("Qauntity: " + d.value);
-    d3.select("#tooltip").classed("hidden", false);
-  })
-  .on("mouseout", function(){
-    d3.select("#tooltip").classed("hidden", true);
-  });
+  .append("title")
+  .text(function(d) {return getTitle(d.value);})
 
   return bar;
 }
@@ -293,4 +278,9 @@ function getColor(d) {
   else return getColor(d.children[0]);
 
   // return d.color ? d.color : getColor(d.parent);
+}
+
+function getTitle(num) {
+  if( num>=10000 ) return (num/10000).toFixed(2)+"億";
+  else return num+"萬";
 }
