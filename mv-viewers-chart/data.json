@@ -1,0 +1,677 @@
+[
+  {
+    "singer": "周杰倫",
+    "album": [
+      {
+        "name": "Jay",
+        "song": [
+          {
+            "name": "可愛女人",
+            "viewers": 589
+          },
+          {
+            "name": "完美主義",
+            "viewers": 179
+          },
+          {
+            "name": "星晴",
+            "viewers": 692
+          },
+          {
+            "name": "娘子",
+            "viewers": 181
+          },
+          {
+            "name": "鬥牛",
+            "viewers": 137
+          },
+          {
+            "name": "黑色幽默",
+            "viewers": 610
+          },
+          {
+            "name": "伊斯坦堡",
+            "viewers": 160
+          },
+          {
+            "name": "印地安老斑鳩",
+            "viewers": 145
+          },
+          {
+            "name": "龍捲風",
+            "viewers": 1307
+          },
+          {
+            "name": "反方向的鐘",
+            "viewers": 221
+          }
+        ]
+      },
+      {
+        "name": "范特西",
+        "song": [
+          {
+            "name": "愛在西元前",
+            "viewers": 542
+          },
+          {
+            "name": "爸 我回來了",
+            "viewers": 179
+          },
+          {
+            "name": "簡單愛",
+            "viewers": 551
+          },
+          {
+            "name": "忍者",
+            "viewers": 188
+          },
+          {
+            "name": "開不了口",
+            "viewers": 1352
+          },
+          {
+            "name": "上海 一九四三",
+            "viewers": 355
+          },
+          {
+            "name": "對不起",
+            "viewers": 181
+          },
+          {
+            "name": "威廉古堡",
+            "viewers": 178
+          },
+          {
+            "name": "雙截棍",
+            "viewers": 325
+          },
+          {
+            "name": "安靜",
+            "viewers": 1335
+          }
+        ]
+      },
+      {
+        "name": "八度空間",
+        "song": [
+          {
+            "name": "半獸人",
+            "viewers": 196
+          },
+          {
+            "name": "半島鐵盒",
+            "viewers": 607
+          },
+          {
+            "name": "暗號",
+            "viewers": 396
+          },
+          {
+            "name": "龍拳",
+            "viewers": 134
+          },
+          {
+            "name": "火車叨位去",
+            "viewers": 96
+          },
+          {
+            "name": "分裂",
+            "viewers": 286
+          },
+          {
+            "name": "爺爺泡的茶",
+            "viewers": 277
+          },
+          {
+            "name": "回到過去",
+            "viewers": 653
+          },
+          {
+            "name": "米蘭的小鐵匠",
+            "viewers": 128
+          },
+          {
+            "name": "最後的戰役",
+            "viewers": 212
+          }
+        ]
+      },
+      {
+        "name": "葉惠美",
+        "song": [
+          {
+            "name": "以父之名",
+            "viewers": 390
+          },
+          {
+            "name": "懦夫",
+            "viewers": 84
+          },
+          {
+            "name": "晴天",
+            "viewers": 2071
+          },
+          {
+            "name": "三年二班",
+            "viewers": 257
+          },
+          {
+            "name": "東風破",
+            "viewers": 454
+          },
+          {
+            "name": "妳聽得到",
+            "viewers": 318
+          },
+          {
+            "name": "同一種調調",
+            "viewers": 80
+          },
+          {
+            "name": "她的睫毛",
+            "viewers": 190
+          },
+          {
+            "name": "愛情懸崖",
+            "viewers": 153
+          },
+          {
+            "name": "梯田",
+            "viewers": 87
+          },
+          {
+            "name": "雙刀",
+            "viewers": 75
+          }
+        ]
+      },
+      {
+        "name": "七里香",
+        "song": [
+          {
+            "name": "我的地盤",
+            "viewers": 105
+          },
+          {
+            "name": "七里香",
+            "viewers": 1542
+          },
+          {
+            "name": "藉口",
+            "viewers": 1230
+          },
+          {
+            "name": "外婆",
+            "viewers": 203
+          },
+          {
+            "name": "將軍",
+            "viewers": 125
+          },
+          {
+            "name": "擱淺",
+            "viewers": 1552
+          },
+          {
+            "name": "亂舞春秋",
+            "viewers": 130
+          },
+          {
+            "name": "困獸之鬥",
+            "viewers": 115
+          },
+          {
+            "name": "園遊會",
+            "viewers": 347
+          },
+          {
+            "name": "止戰之殤",
+            "viewers": 419
+          }
+        ]
+      },
+      {
+        "name": "11月的蕭邦",
+        "song": [
+          {
+            "name": "夜曲",
+            "viewers": 1657
+          },
+          {
+            "name": "藍色風暴",
+            "viewers": 168
+          },
+          {
+            "name": "髮如雪",
+            "viewers": 1587
+          },
+          {
+            "name": "黑色毛衣",
+            "viewers": 630
+          },
+          {
+            "name": "四面楚歌",
+            "viewers": 240
+          },
+          {
+            "name": "楓",
+            "viewers": 1297
+          },
+          {
+            "name": "浪漫手機",
+            "viewers": 270
+          },
+          {
+            "name": "逆鱗",
+            "viewers": 119
+          },
+          {
+            "name": "麥芽糖",
+            "viewers": 146
+          },
+          {
+            "name": "珊瑚海",
+            "viewers": 2517
+          },
+          {
+            "name": "飄移",
+            "viewers": 344
+          },
+          {
+            "name": "一路向北",
+            "viewers": 1363
+          },
+        ]
+      },
+      {
+        "name": "依然范特西",
+        "song": [
+          {
+            "name": "夜的第七章",
+            "viewers": 627
+          },
+          {
+            "name": "聽媽媽的話",
+            "viewers": 1381
+          },
+          {
+            "name": "千里之外",
+            "viewers": 1476
+          },
+          {
+            "name": "本草綱目",
+            "viewers": 563
+          },
+          {
+            "name": "退後",
+            "viewers": 648
+          },
+          {
+            "name": "紅模仿",
+            "viewers": 389
+          },
+          {
+            "name": "心雨",
+            "viewers": 523
+          },
+          {
+            "name": "白色風車",
+            "viewers": 696
+          },
+          {
+            "name": "迷迭香",
+            "viewers": 357
+          },
+          {
+            "name": "菊花台",
+            "viewers": 1577
+          }
+        ]
+      },
+      {
+        "name": "我很忙",
+        "song": [
+          {
+            "name": "牛仔很忙",
+            "viewers": 217
+          },
+          {
+            "name": "彩虹",
+            "viewers": 1581
+          },
+          {
+            "name": "青花瓷",
+            "viewers": 1684
+          },
+          {
+            "name": "陽光宅男",
+            "viewers": 799
+          },
+          {
+            "name": "蒲公英的約定",
+            "viewers": 307
+          },
+          {
+            "name": "無雙",
+            "viewers": 120
+          },
+          {
+            "name": "我不配",
+            "viewers": 1131
+          },
+          {
+            "name": "扯",
+            "viewers": 85
+          },
+          {
+            "name": "甜甜的",
+            "viewers": 221
+          },
+          {
+            "name": "最長的電影",
+            "viewers": 1689
+          }
+        ]
+      },
+      {
+        "name": "魔杰座",
+        "song": [
+          {
+            "name": "龍戰騎士",
+            "viewers": 182
+          },
+          {
+            "name": "給我一首歌的時間",
+            "viewers": 2396
+          },
+          {
+            "name": "蛇舞",
+            "viewers": 144
+          },
+          {
+            "name": "花海",
+            "viewers": 166
+          },
+          {
+            "name": "魔術先生",
+            "viewers": 101
+          },
+          {
+            "name": "說好的幸福呢",
+            "viewers": 2232
+          },
+          {
+            "name": "蘭亭序",
+            "viewers": 370
+          },
+          {
+            "name": "流浪詩人",
+            "viewers": 68
+          },
+          {
+            "name": "時光機",
+            "viewers": 422
+          },
+          {
+            "name": "喬克叔叔",
+            "viewers": 102
+          },
+          {
+            "name": "稻香",
+            "viewers": 763
+          }
+        ]
+      },
+      {
+        "name": "跨時代",
+        "song": [
+          {
+            "name": "跨時代",
+            "viewers": 177
+          },
+          {
+            "name": "說了再見",
+            "viewers": 1951
+          },
+          {
+            "name": "煙花易冷",
+            "viewers": 1326
+          },
+          {
+            "name": "免費教學錄像帶",
+            "viewers": 57
+          },
+          {
+            "name": "好久不見",
+            "viewers": 356
+          },
+          {
+            "name": "雨下一整晚",
+            "viewers": 329
+          },
+          {
+            "name": "嘻哈空姐",
+            "viewers": 66
+          },
+          {
+            "name": "我落淚·情緒零碎",
+            "viewers": 339
+          },
+          {
+            "name": "愛的飛行日記",
+            "viewers": 153
+          },
+          {
+            "name": "自導自演",
+            "viewers": 241
+          },
+          {
+            "name": "超人不會飛",
+            "viewers": 505
+          }
+        ]
+      },
+      {
+        "name": "驚嘆號",
+        "song": [
+          {
+            "name": "驚嘆號",
+            "viewers": 357
+          },
+          {
+            "name": "迷魂曲",
+            "viewers": 149
+          },
+          {
+            "name": "Mine Mine",
+            "viewers": 1438
+          },
+          {
+            "name": "公主病",
+            "viewers": 1041
+          },
+          {
+            "name": "你好嗎",
+            "viewers": 1312
+          },
+          {
+            "name": "療傷燒肉粽",
+            "viewers": 459
+          },
+          {
+            "name": "琴傷",
+            "viewers": 261
+          },
+          {
+            "name": "水手怕水",
+            "viewers": 411
+          },
+          {
+            "name": "世界未末日",
+            "viewers": 540
+          },
+          {
+            "name": "皮影戲",
+            "viewers": 196
+          },
+          {
+            "name": "超跑女神",
+            "viewers": 411
+          }
+        ]
+      },
+      {
+        "name": "12新作",
+        "song": [
+          {
+            "name": "四季列車",
+            "viewers": 58
+          },
+          {
+            "name": "手語",
+            "viewers": 449
+          },
+          {
+            "name": "公公偏頭痛",
+            "viewers": 1674
+          },
+          {
+            "name": "明明就",
+            "viewers": 5837
+          },
+          {
+            "name": "傻笑",
+            "viewers": 1925
+          },
+          {
+            "name": "比較大的大提琴",
+            "viewers": 378
+          },
+          {
+            "name": "愛你沒差",
+            "viewers": 1837
+          },
+          {
+            "name": "紅塵客棧",
+            "viewers": 2373
+          },
+          {
+            "name": "夢想啟動",
+            "viewers": 321
+          },
+          {
+            "name": "大笨鐘",
+            "viewers": 2257
+          },
+          {
+            "name": "哪裡都是你",
+            "viewers": 1083
+          },
+          {
+            "name": "烏克麗麗",
+            "viewers": 818
+          },
+        ]
+      },
+      {
+        "name": "哎呦，不錯哦",
+        "song": [
+          {
+            "name": "陽明山",
+            "viewers": 522
+          },
+          {
+            "name": "竊愛",
+            "viewers": 574
+          },
+          {
+            "name": "算什麼男人",
+            "viewers": 7222
+          },
+          {
+            "name": "天涯過客",
+            "viewers": 947
+          },
+          {
+            "name": "怎麼了",
+            "viewers": 1260
+          },
+          {
+            "name": "一口氣全唸對",
+            "viewers": 606
+          },
+          {
+            "name": "我要夏天",
+            "viewers": 599
+          },
+          {
+            "name": "手寫的從前",
+            "viewers": 3563
+          },
+          {
+            "name": "鞋子特大號",
+            "viewers": 949
+          },
+          {
+            "name": "聽爸爸的話",
+            "viewers": 2901
+          },
+          {
+            "name": "美人魚",
+            "viewers": 268
+          },
+          {
+            "name": "聽見下雨的聲音",
+            "viewers": 5596
+          },
+        ]
+      },
+      {
+        "name": "周杰倫的床邊故事",
+        "song": [
+          {
+            "name": "床邊故事",
+            "viewers": 1107
+          },
+          {
+            "name": "說走就走",
+            "viewers": 701
+          },
+          {
+            "name": "一點點",
+            "viewers": 528
+          },
+          {
+            "name": "前世情人",
+            "viewers": 905
+          },
+          {
+            "name": "英雄",
+            "viewers": 186
+          },
+          {
+            "name": "不該",
+            "viewers": 11089
+          },
+          {
+            "name": "土耳其冰淇淋",
+            "viewers": 555
+          },
+          {
+            "name": "告白氣球",
+            "viewers": 14068
+          },
+          {
+            "name": "Now You See Me",
+            "viewers": 619
+          },
+          {
+            "name": "愛情廢柴",
+            "viewers": 4824
+          }
+        ]
+      }
+    ]
+  }
+]
