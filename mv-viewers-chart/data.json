@@ -1,12 +1,15 @@
 {
+  "label": "歌手",
   "name": "data",
   "children": [
     {
-      "label": "singer",
+      "label": "專輯名稱",
+      "color": "green",
       "name": "周杰倫",
       "children": [
         {
-          "label": "album",
+          "label": "專輯歌曲",
+          "color": "red",
           "name": "Jay",
           "children": [
             {
@@ -52,7 +55,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "范特西",
           "children": [
             {
@@ -98,7 +101,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "八度空間",
           "children": [
             {
@@ -144,7 +147,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "葉惠美",
           "children": [
             {
@@ -194,7 +197,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "七里香",
           "children": [
             {
@@ -240,7 +243,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "11月的蕭邦",
           "children": [
             {
@@ -294,7 +297,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "依然范特西",
           "children": [
             {
@@ -340,7 +343,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "我很忙",
           "children": [
             {
@@ -386,7 +389,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "魔杰座",
           "children": [
             {
@@ -436,7 +439,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "跨時代",
           "children": [
             {
@@ -486,7 +489,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "驚嘆號",
           "children": [
             {
@@ -536,7 +539,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "12新作",
           "children": [
             {
@@ -590,7 +593,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "哎呦，不錯哦",
           "children": [
             {
@@ -644,7 +647,7 @@
           ]
         },
         {
-          "label": "album",
+          "label": "專輯歌曲",
           "name": "周杰倫的床邊故事",
           "children": [
             {
