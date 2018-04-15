@@ -1,25 +1,30 @@
-
 var margin = {top: 40, right: 100, bottom: 0, left: 175},
-width = 1060 - margin.left - margin.right,
+width = 1200 - margin.left - margin.right,
 height = 600 - margin.top - margin.bottom;
 
-var x = d3.scale.linear()
-.range([0, width-80]);
+var y = d3.scale.linear()
+.range([0, height-100]);
+
+var yNeg = d3.scale.linear()
+.range([height-100, 0]);
 
 var barHeight = 25;
 
 var color = d3.scale.ordinal()
-.range(["#FFBB77", "#FFE6D9"]);
+.range(["#000000", "#111111"]);
 
 var duration = 750,
 delay = 25;
 
 var partition = d3.layout.partition()
-.value(function(d) { return d.size; });
+.value(function(d) { return d.viewers; });
 
-var xAxis = d3.svg.axis()
-.scale(x)
-.orient("top");
+var yAxis = d3.svg.axis()
+.scale(y)
+.orient("left");
+var yAxisNeg = d3.svg.axis()
+.scale(yNeg)
+.orient("left");
 
 var svg = d3.select("body").append("svg")
 .attr("width", width + margin.left + margin.right)
@@ -32,45 +37,54 @@ svg.append("rect")
 .attr("width", width)
 .attr("height", height)
 .on("click", up)
-.append("title")
-.text("點選空白處回上層");
 
 
 svg.append("text")
-.attr("text-anchor", "middle")
-.attr("transform", "translate(-50," + height*0.85 + ")")
-.attr("font-size", "22px")
-.attr("font-family", "微軟正黑體")
-.attr("font-weight", "bold")
-.style("fill", "#5151A2")
-.text("商品類別");
+.attr({
+  'text-anchor': "middle",
+  'transform': `translate(-100, ${height*0.5})`,
+  'class': 'label',
+  'id': "x-label",
+})
+.html("觀看人數");
+svg.append("text")
+.attr({
+  'text-anchor': "middle",
+  'transform': `translate(-100, ${height*0.5+30})`,
+  'class': 'label',
+})
+.html("(萬人)");
 
 svg.append("text")
-.attr("text-anchor", "middle")
-.attr("transform", "translate(" + (width) + ", 0)")
-.attr("font-size", "22px")
-.attr("font-family", "微軟正黑體")
-.attr("font-weight", "bold")
-.style("fill", "#5151A2")
-.text("商品數量");
+.attr({
+  'transform': `translate(${width*0.5}, ${height*0.95})`,
+  'class': 'label',
+  'id': "y-label",
+})
+.text("專輯名稱");
 
 svg.append("g")
-.attr("class", "x axis");
+.attr("class", "y axis");
 
 svg.append("g")
-.attr("class", "y axis")
+.attr("class", "x axis")
+.attr("transform", `translate(0, ${height*0.82})`)
 .append("line")
-.attr("y1", "80%");
+.attr("x1", "80%");
 
 d3.json("https://colman423.github.io/Information-Visualization/mv-viewers-chart/data.json", function(error, root) {
   if (error) throw error;
+  console.log(root);
 
   partition.nodes(root);
-  x.domain([0, root.value]).nice();
+  y.domain([0, root.value]).nice();
+  yNeg.domain([0, root.value]).nice();
   down(root, 0);
 });
 
 function down(d, i) {
+  console.log(d);
+  console.log(i);
   if (!d.children || this.__transition__) return;
   var end = duration + d.children.length * delay;
 
@@ -82,6 +96,11 @@ function down(d, i) {
   exit.selectAll("rect").filter(function(p) { return p === d; })
   .style("fill-opacity", 1e-6);
 
+  // Update the y-scale domain.
+  var max = d3.max(d.children, function(d) { return d.value; });
+  y.domain([0, max]).nice();
+  yNeg.domain([0, max]).nice();
+
   // Enter the new bars for the clicked-on data.
   // Per above, entering bars are immediately visible.
   var enter = bar(d)
@@ -91,40 +110,40 @@ function down(d, i) {
   // Have the text fade-in, even though the bars are visible.
   // Color the bars as parents; they will fade to children if appropriate.
   enter.select("text").style("fill-opacity", 1e-6);
-  enter.select("rect").style("fill", color(true));
+  enter.select("rect").style("fill", getColor(d));
 
-  // Update the x-scale domain.
-  x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
-
-  // Update the x-axis.
-  svg.selectAll(".x.axis").transition()
+  // Update the y-axis.
+  svg.selectAll(".y.axis").transition()
   .duration(duration)
-  .call(xAxis);
+  .call(yAxisNeg);
 
   // Transition entering bars to their new position.
-  var enterTransition = enter.transition()
+  var enterTransition = enter
+  .transition()
   .duration(duration)
   .delay(function(d, i) { return i * delay; })
-  .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.1 + ")"; });
+  .attr("transform", function(d, i) { return `translate( ${barHeight * i * 2.8}, ${height*0})`; });
 
   // Transition entering text.
   enterTransition.select("text")
   .style("fill-opacity", 1);
 
-  // Transition entering rects to the new x-scale.
+  // Transition entering rects to the new y-scale.
   enterTransition.select("rect")
-  .attr("width", function(d) { return x(d.value); })
-  .style("fill", function(d) { return color(!!d.children); });
+  .attr("height", function(d) { return y(d.value); })
+  .style("fill", function(d) { return getColor(d); });
 
   // Transition exiting bars to fade out.
-  var exitTransition = exit.transition()
+  var exitTransition = exit
+  .transition()
   .duration(duration)
   .style("opacity", 1e-6)
   .remove();
 
-  // Transition exiting bars to the new x-scale.
+  // Transition exiting bars to the new y-scale.
   exitTransition.selectAll("rect")
-  .attr("width", function(d) { return x(d.value); });
+  .attr("height", function(d) { return y(d.value); });
+  // exit.remove();
 
   // Rebind the current node to the background.
   svg.select(".background")
@@ -132,10 +151,14 @@ function down(d, i) {
   .transition()
   .duration(end);
 
+  $('#y-label').text(d.label);
+
   d.index = i;
 }
 
-function up(d) {
+function up(d, i) {
+  console.log(d);
+  console.log(i);
   if (!d.parent || this.__transition__) return;
   var end = duration + d.children.length * delay;
 
@@ -143,36 +166,41 @@ function up(d) {
   var exit = svg.selectAll(".enter")
   .attr("class", "exit");
 
+  // Update the y-scale domain.
+  var max = d3.max(d.parent.children, function(d) { return d.value; });
+  y.domain([0, max]).nice();
+  yNeg.domain([0, max]).nice();
+
   // Enter the new bars for the clicked-on data's parent.
   var enter = bar(d.parent)
-  .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.1 + ")"; })
-  .style("opacity", 1e-6);
-
+  .attr("transform", function(d, i) { return `translate( ${barHeight * i * 2.8}, 0)`; })
+  .style("opacity", 1);
   // Color the bars as appropriate.
   // Exiting nodes will obscure the parent bar, so hide it.
   enter.select("rect")
-  .style("fill", function(d) { return color(!!d.children); })
-  .filter(function(p) { return p === d; })
-  .style("fill-opacity", 1e-6);
-
-  // Update the x-scale domain.
-  x.domain([0, d3.max(d.parent.children, function(d) { return d.value; })]).nice();
-
-  // Update the x-axis.
-  svg.selectAll(".x.axis").transition()
+  .style("fill", function(d) { return getColor(d); })
+  // .filter(function(p) { return p === d; })
+  .style("opacity", 1e-6).transition()
   .duration(duration)
-  .call(xAxis);
-
-  // Transition entering bars to fade in over the full duration.
-  var enterTransition = enter.transition()
-  .duration(end)
   .style("opacity", 1);
 
-  // Transition entering rects to the new x-scale.
-  // When the entering parent rect is done, make it visible!
-  enterTransition.select("rect")
-  .attr("width", function(d) { return x(d.value); })
-  .each("end", function(p) { if (p === d) d3.select(this).style("fill-opacity", null); });
+
+  // Update the x-axis.
+  svg.selectAll(".y.axis").transition()
+  .duration(duration)
+  .call(yAxisNeg);
+
+  // // Transition entering bars to fade in over the full duration.
+  // var enterTransition = enter.transition()
+  // .duration(duration)
+  // .style("opacity", 1);
+  // console.log(enter);
+  // console.log(enterTransition);
+  // // Transition entering rects to the new y-scale.
+  // // When the entering parent rect is done, make it visible!
+  // enterTransition.select("rect")
+  // .attr("height", function(d) { return y(d.value); })
+  // .each("end", function(p) {  d3.select(this).style("opacity", 1); });
 
   // Transition exiting bars to the parent's position.
   var exitTransition = exit.selectAll("g").transition()
@@ -186,13 +214,15 @@ function up(d) {
 
   // Transition exiting rects to the new scale and fade to parent color.
   exitTransition.select("rect")
-  .attr("width", function(d) { return x(d.value); })
-  .style("fill", color(true));
+  .attr("height", function(d) { return y(d.value); })
+  .style("fill", getColor(d));
 
   // Remove exiting nodes when the last child has finished transitioning.
   exit.transition()
   .duration(end)
   .remove();
+
+  $('#y-label').text(d.parent.label);
 
   // Rebind the current parent to the background.
   svg.select(".background")
@@ -203,9 +233,9 @@ function up(d) {
 
 // Creates a set of bars for the given data node, at the specified index.
 function bar(d) {
-  var bar = svg.insert("g", ".y.axis")
+  var bar = svg.insert("g", ".x.axis")
   .attr("class", "enter")
-  .attr("transform", "translate(0,5)")
+  .attr("transform", "translate(0,0)")
   .selectAll("g")
   .data(d.children)
   .enter().append("g")
@@ -214,21 +244,22 @@ function bar(d) {
 
 
   bar.append("text")
-  .attr("x", -6)
-  .attr("y", barHeight / 2)
-  .attr("dy", ".35em")
-  .style("text-anchor", "end")
+  .attr("y", height-60)
+  .attr("x", barHeight / 2)
+  .attr("dx", ".35em")
+  .attr("transform", "translate(310, 80)rotate(40)")
+  // .style("text-anchor", "end")
   .attr("font-family", "Comic Sans MS")
+  .attr('font-weight', "bold")
   .text(function(d) { return d.name; });
 
   bar.append("rect")
-  .attr("width", function(d) { return x(d.value); })
-  .attr("height", barHeight)
-  //.append("title")
-  //.text(function(d) {return d.value;})
+  .attr("width", barHeight)
+  .attr("y", function(d) { return yNeg(d.value); })
+  .attr("height", function(d) { return y(d.value); })
   .on("mouseover", function(d){
-    var xPosition = d3.event.pageX + 10;
     var yPosition = d3.event.pageY + 10;
+    var xPosition = d3.event.pageX + 10;
 
     d3.select("#tooltip")
     .style("left", xPosition + "px")
@@ -247,10 +278,19 @@ function bar(d) {
 
 // A stateful closure for stacking bars horizontally.
 function stack(i) {
-  var x0 = 0;
+  var y0 = height;
   return function(d) {
-    var tx = "translate(" + x0 + "," + barHeight * i * 1.1 + ")";
-    x0 += x(d.value);
+    var tx = `translate(${barHeight*i*2.8}, ${y0})`;
+    // "translate(" + y0 + "," + barHeight * i * 2.8 + ")";
+    y0 += yNeg(d.value);
     return tx;
   };
+}
+
+function getColor(d) {
+  if( d.color ) return d.color;
+  else if( d.parent ) return getColor(d.parent);
+  else return getColor(d.children[0]);
+
+  // return d.color ? d.color : getColor(d.parent);
 }
