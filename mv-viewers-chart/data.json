@@ -1,11 +1,14 @@
 {
-  "data": [
+  "name": "data",
+  "children": [
     {
-      "singer": "周杰倫",
-      "album": [
+      "label": "singer",
+      "name": "周杰倫",
+      "children": [
         {
+          "label": "album",
           "name": "Jay",
-          "song": [
+          "children": [
             {
               "name": "可愛女人",
               "viewers": 589
@@ -49,6 +52,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "范特西",
           "song": [
             {
@@ -94,6 +98,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "八度空間",
           "song": [
             {
@@ -139,6 +144,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "葉惠美",
           "song": [
             {
@@ -188,6 +194,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "七里香",
           "song": [
             {
@@ -233,6 +240,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "11月的蕭邦",
           "song": [
             {
@@ -286,6 +294,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "依然范特西",
           "song": [
             {
@@ -331,6 +340,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "我很忙",
           "song": [
             {
@@ -376,6 +386,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "魔杰座",
           "song": [
             {
@@ -425,6 +436,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "跨時代",
           "song": [
             {
@@ -474,6 +486,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "驚嘆號",
           "song": [
             {
@@ -523,6 +536,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "12新作",
           "song": [
             {
@@ -576,6 +590,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "哎呦，不錯哦",
           "song": [
             {
@@ -629,6 +644,7 @@
           ]
         },
         {
+          "label": "album",
           "name": "周杰倫的床邊故事",
           "song": [
             {
