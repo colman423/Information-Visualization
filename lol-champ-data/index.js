@@ -14,7 +14,7 @@ $.getJSON("https://colman423.github.io/Information-Visualization/lol-champ-data/
   chart.append('g').attr({'id': 'xAxis', 'transform': 'translate(0, '+w*0.568+')'});
   chart.append('g').attr('id', 'yAxis').attr('transform', 'translate(65, 0)');
   chart.append('line').attr('id', 'bestfit');
-  chart.append('text').attr({'id': "xLabel", 'x': "500", 'y': w*0.6, 'text-anchor': "middle"}).text('禁用率');
+  chart.append('text').attr({'id': "xLabel", 'x': "500", 'y': w*0.61, 'text-anchor': "middle"}).text('禁用率');
   chart.append('text').attr({'id': "yLabel", 'text-anchor': "middle", 'transform': 'translate(15, 330)rotate(-90)'}).text('勝率');
 
   var margin = {top: 20, right: 20, bottom: 50, left: 70};
