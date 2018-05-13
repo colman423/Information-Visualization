@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>bounce demo</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  #toggle {
+      width: 100px;
+      height: 100px;
+      background: #ccc;
+      position:absolute;
+  }
+  .outer {
+      width: 400px;
+      position:fixed;
+      top:0;
+      left:0;
+      height:100%;
+  }
+  .gif-player {
+      display: table;
+      position: absolute;
+      margin: 0 auto;
+      top: 20%;
+      left: 43.75%;
+
+  }
+  .gif-player-icon {
+
+      width: 50px;
+      height: 50px;
+      font-family: Arial, sans serif;
+      line-height: 52px;
+      text-align: center;
+      background: #222;
+      font-size: 18px;
+      color: #fff;
+      border-radius: 50%;
+      opacity: .9;
+      border: 4px solid #fff;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://rubentd.com/bower_components/jquery.gifplayer/dist/gifplayer.css" type="text/css">
+  <script src="http://rubentd.com/bower_components/jquery.gifplayer/dist/jquery.gifplayer.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!-- <p>Click anywhere to toggle the box.</p>
+<div id="toggle"></div> -->
+<div class="outer">
+    <video autoplay muted loop class="gif" style="width: 100%;">
+        <source src=".\video.mp4"/>
+    </video>
+    <div class="gif-player">
+        <div class="gif-player-icon" style="display: none;">GIF</div>
+    </div>
+</div>
+
+<script>
+$(function() {
+    $('.gif').on('click', toggle);
+    function toggle() {
+        var gif = $(this).parent().find('.gif')[0];
+        var icon = $(this).parent().find('.gif-player-icon');
+        if( gif.paused ) {
+            gif.play();
+            icon.hide();
+        }
+        else {
+            gif.pause();
+            icon.show();
+        }
+    }
+    $('.gif-player').on('click', toggle);
+})
+$( document ).click(function() {
+  $( "#toggle" ).animate({
+        top: '300px'
+    }).effect("bounce", { times: 2 }, 700);
+  // $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+});
+</script>
+
+</body>
+</html>
