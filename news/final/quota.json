@@ -24,49 +24,64 @@
 	"value": 1563,
 	"children": [{
 		"name": "商業與管理群",
-		"value": 734
+		"value": 734,
+		"sum": 734
 	}, {
 		"name": "家政群幼保類",
-		"value": 82
+		"value": 82,
+		"sum": 816
 	}, {
 		"name": "幼保類",
-		"value": 4
+		"value": 4,
+		"sum": 820
 	}, {
 		"name": "外語群英語類",
-		"value": 71
+		"value": 71,
+		"sum": 891
 	}, {
 		"name": "設計群",
-		"value": 343
+		"value": 343,
+		"sum": 1234
 	}, {
 		"name": "設計類(二)",
-		"value": 4
+		"value": 4,
+		"sum": 1238
 	}, {
 		"name": "家政群生活應用類",
-		"value": 227
+		"value": 227,
+		"sum": 1465
 	}, {
 		"name": "語文類(一)",
-		"value": 8
+		"value": 8,
+		"sum": 1473
 	}, {
 		"name": "外語群日語類",
-		"value": 23
+		"value": 23,
+		"sum": 1496
 	}, {
 		"name": "藝術群影視類",
-		"value": 17
+		"value": 17,
+		"sum": 1513
 	}, {
 		"name": "工程與管理類",
-		"value": 42
+		"value": 42,
+		"sum": 1555
 	}, {
 		"name": "管理類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 1556
 	}, {
 		"name": "管理類(二)",
-		"value": 1
+		"value": 1,
+		"sum": 1557
 	}, {
 		"name": "管理類(四)",
-		"value": 2
+		"value": 2,
+		"sum": 1559
 	}, {
 		"name": "語文類(二)",
-		"value": 4
+		"value": 4,
+		"sum": 1563
 	}],
 	"sum": 3171
 }, {
@@ -75,31 +90,40 @@
 	"value": 744,
 	"children": [{
 		"name": "機械群",
-		"value": 148
+		"value": 148,
+		"sum": 148
 	}, {
 		"name": "動力機械群",
-		"value": 95
+		"value": 95,
+		"sum": 243
 	}, {
 		"name": "機械類",
-		"value": 4
+		"value": 4,
+		"sum": 247
 	}, {
 		"name": "電子類",
-		"value": 0
+		"value": 0,
+		"sum": 247
 	}, {
 		"name": "電機類",
-		"value": 5
+		"value": 5,
+		"sum": 252
 	}, {
 		"name": "電機與電子群電機類",
-		"value": 133
+		"value": 133,
+		"sum": 385
 	}, {
 		"name": "土木與建築群",
-		"value": 44
+		"value": 44,
+		"sum": 429
 	}, {
 		"name": "化工群",
-		"value": 26
+		"value": 26,
+		"sum": 455
 	}, {
 		"name": "電機與電子群資電類",
-		"value": 289
+		"value": 289,
+		"sum": 744
 	}],
 	"sum": 3915
 }, {
@@ -108,22 +132,28 @@
 	"value": 649,
 	"children": [{
 		"name": "衛生與護理類",
-		"value": 56
+		"value": 56,
+		"sum": 56
 	}, {
 		"name": "醫事類(一)",
-		"value": 11
+		"value": 11,
+		"sum": 67
 	}, {
 		"name": "護理類(一)",
-		"value": 6
+		"value": 6,
+		"sum": 73
 	}, {
 		"name": "食品群",
-		"value": 79
+		"value": 79,
+		"sum": 152
 	}, {
 		"name": "餐旅類",
-		"value": 19
+		"value": 19,
+		"sum": 171
 	}, {
 		"name": "餐旅群",
-		"value": 478
+		"value": 478,
+		"sum": 649
 	}],
 	"sum": 4564
 }, {
@@ -132,10 +162,12 @@
 	"value": 70,
 	"children": [{
 		"name": "農業群",
-		"value": 69
+		"value": 69,
+		"sum": 69
 	}, {
 		"name": "水產群",
-		"value": 1
+		"value": 1,
+		"sum": 70
 	}],
 	"sum": 4634
 }, {
@@ -164,49 +196,64 @@
 	"value": 1707,
 	"children": [{
 		"name": "商業與管理群",
-		"value": 780
+		"value": 780,
+		"sum": 780
 	}, {
 		"name": "家政群幼保類",
-		"value": 97
+		"value": 97,
+		"sum": 877
 	}, {
 		"name": "幼保類",
-		"value": 2
+		"value": 2,
+		"sum": 879
 	}, {
 		"name": "外語群英語類",
-		"value": 88
+		"value": 88,
+		"sum": 967
 	}, {
 		"name": "設計群",
-		"value": 336
+		"value": 336,
+		"sum": 1303
 	}, {
 		"name": "設計類(二)",
-		"value": 6
+		"value": 6,
+		"sum": 1309
 	}, {
 		"name": "家政群生活應用類",
-		"value": 254
+		"value": 254,
+		"sum": 1563
 	}, {
 		"name": "語文類(一)",
-		"value": 8
+		"value": 8,
+		"sum": 1571
 	}, {
 		"name": "外語群日語類",
-		"value": 22
+		"value": 22,
+		"sum": 1593
 	}, {
 		"name": "藝術群影視類",
-		"value": 35
+		"value": 35,
+		"sum": 1628
 	}, {
 		"name": "工程與管理類",
-		"value": 73
+		"value": 73,
+		"sum": 1701
 	}, {
 		"name": "管理類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 1702
 	}, {
 		"name": "管理類(二)",
-		"value": 2
+		"value": 2,
+		"sum": 1704
 	}, {
 		"name": "管理類(四)",
-		"value": 0
+		"value": 0,
+		"sum": 1704
 	}, {
 		"name": "語文類(二)",
-		"value": 3
+		"value": 3,
+		"sum": 1707
 	}],
 	"sum": 3222
 }, {
@@ -215,31 +262,40 @@
 	"value": 716,
 	"children": [{
 		"name": "機械群",
-		"value": 167
+		"value": 167,
+		"sum": 167
 	}, {
 		"name": "動力機械群",
-		"value": 89
+		"value": 89,
+		"sum": 256
 	}, {
 		"name": "機械類",
-		"value": 0
+		"value": 0,
+		"sum": 256
 	}, {
 		"name": "電子類",
-		"value": 2
+		"value": 2,
+		"sum": 258
 	}, {
 		"name": "電機類",
-		"value": 2
+		"value": 2,
+		"sum": 260
 	}, {
 		"name": "電機與電子群電機類",
-		"value": 136
+		"value": 136,
+		"sum": 396
 	}, {
 		"name": "土木與建築群",
-		"value": 51
+		"value": 51,
+		"sum": 447
 	}, {
 		"name": "化工群",
-		"value": 19
+		"value": 19,
+		"sum": 466
 	}, {
 		"name": "電機與電子群資電類",
-		"value": 250
+		"value": 250,
+		"sum": 716
 	}],
 	"sum": 3938
 }, {
@@ -248,22 +304,28 @@
 	"value": 678,
 	"children": [{
 		"name": "衛生與護理類",
-		"value": 101
+		"value": 101,
+		"sum": 101
 	}, {
 		"name": "醫事類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 102
 	}, {
 		"name": "護理類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 103
 	}, {
 		"name": "食品群",
-		"value": 74
+		"value": 74,
+		"sum": 177
 	}, {
 		"name": "餐旅類",
-		"value": 5
+		"value": 5,
+		"sum": 182
 	}, {
 		"name": "餐旅群",
-		"value": 496
+		"value": 496,
+		"sum": 678
 	}],
 	"sum": 4616
 }, {
@@ -272,10 +334,12 @@
 	"value": 65,
 	"children": [{
 		"name": "農業群",
-		"value": 63
+		"value": 63,
+		"sum": 63
 	}, {
 		"name": "水產群",
-		"value": 2
+		"value": 2,
+		"sum": 65
 	}],
 	"sum": 4681
 }, {
@@ -304,49 +368,64 @@
 	"value": 1638,
 	"children": [{
 		"name": "商業與管理群",
-		"value": 736
+		"value": 736,
+		"sum": 736
 	}, {
 		"name": "家政群幼保類",
-		"value": 94
+		"value": 94,
+		"sum": 830
 	}, {
 		"name": "幼保類",
-		"value": 2
+		"value": 2,
+		"sum": 832
 	}, {
 		"name": "外語群英語類",
-		"value": 93
+		"value": 93,
+		"sum": 925
 	}, {
 		"name": "設計群",
-		"value": 392
+		"value": 392,
+		"sum": 1317
 	}, {
 		"name": "設計類(二)",
-		"value": 5
+		"value": 5,
+		"sum": 1322
 	}, {
 		"name": "家政群生活應用類",
-		"value": 202
+		"value": 202,
+		"sum": 1524
 	}, {
 		"name": "語文類(一)",
-		"value": 4
+		"value": 4,
+		"sum": 1528
 	}, {
 		"name": "外語群日語類",
-		"value": 40
+		"value": 40,
+		"sum": 1568
 	}, {
 		"name": "藝術群影視類",
-		"value": 30
+		"value": 30,
+		"sum": 1598
 	}, {
 		"name": "工程與管理類",
-		"value": 33
+		"value": 33,
+		"sum": 1631
 	}, {
 		"name": "管理類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 1632
 	}, {
 		"name": "管理類(二)",
-		"value": 3
+		"value": 3,
+		"sum": 1635
 	}, {
 		"name": "管理類(四)",
-		"value": 0
+		"value": 0,
+		"sum": 1635
 	}, {
 		"name": "語文類(二)",
-		"value": 3
+		"value": 3,
+		"sum": 1638
 	}],
 	"sum": 3178
 }, {
@@ -355,31 +434,40 @@
 	"value": 803,
 	"children": [{
 		"name": "機械群",
-		"value": 173
+		"value": 173,
+		"sum": 173
 	}, {
 		"name": "動力機械群",
-		"value": 91
+		"value": 91,
+		"sum": 264
 	}, {
 		"name": "機械類",
-		"value": 0
+		"value": 0,
+		"sum": 264
 	}, {
 		"name": "電子類",
-		"value": 2
+		"value": 2,
+		"sum": 266
 	}, {
 		"name": "電機類",
-		"value": 2
+		"value": 2,
+		"sum": 268
 	}, {
 		"name": "電機與電子群電機類",
-		"value": 143
+		"value": 143,
+		"sum": 411
 	}, {
 		"name": "土木與建築群",
-		"value": 44
+		"value": 44,
+		"sum": 455
 	}, {
 		"name": "化工群",
-		"value": 24
+		"value": 24,
+		"sum": 479
 	}, {
 		"name": "電機與電子群資電類",
-		"value": 324
+		"value": 324,
+		"sum": 803
 	}],
 	"sum": 3981
 }, {
@@ -388,22 +476,28 @@
 	"value": 704,
 	"children": [{
 		"name": "衛生與護理類",
-		"value": 35
+		"value": 35,
+		"sum": 35
 	}, {
 		"name": "醫事類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 36
 	}, {
 		"name": "護理類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 37
 	}, {
 		"name": "食品群",
-		"value": 79
+		"value": 79,
+		"sum": 116
 	}, {
 		"name": "餐旅類",
-		"value": 0
+		"value": 0,
+		"sum": 116
 	}, {
 		"name": "餐旅群",
-		"value": 588
+		"value": 588,
+		"sum": 704
 	}],
 	"sum": 4685
 }, {
@@ -412,10 +506,12 @@
 	"value": 81,
 	"children": [{
 		"name": "農業群",
-		"value": 75
+		"value": 75,
+		"sum": 75
 	}, {
 		"name": "水產群",
-		"value": 6
+		"value": 6,
+		"sum": 81
 	}],
 	"sum": 4766
 }, {
@@ -444,49 +540,64 @@
 	"value": 1643,
 	"children": [{
 		"name": "商業與管理群",
-		"value": 685
+		"value": 685,
+		"sum": 685
 	}, {
 		"name": "家政群幼保類",
-		"value": 84
+		"value": 84,
+		"sum": 769
 	}, {
 		"name": "幼保類",
-		"value": 2
+		"value": 2,
+		"sum": 771
 	}, {
 		"name": "外語群英語類",
-		"value": 76
+		"value": 76,
+		"sum": 847
 	}, {
 		"name": "設計群",
-		"value": 448
+		"value": 448,
+		"sum": 1295
 	}, {
 		"name": "設計類(二)",
-		"value": 3
+		"value": 3,
+		"sum": 1298
 	}, {
 		"name": "家政群生活應用類",
-		"value": 224
+		"value": 224,
+		"sum": 1522
 	}, {
 		"name": "語文類(一)",
-		"value": 11
+		"value": 11,
+		"sum": 1533
 	}, {
 		"name": "外語群日語類",
-		"value": 41
+		"value": 41,
+		"sum": 1574
 	}, {
 		"name": "藝術群影視類",
-		"value": 35
+		"value": 35,
+		"sum": 1609
 	}, {
 		"name": "工程與管理類",
-		"value": 22
+		"value": 22,
+		"sum": 1631
 	}, {
 		"name": "管理類(一)",
-		"value": 0
+		"value": 0,
+		"sum": 1631
 	}, {
 		"name": "管理類(二)",
-		"value": 5
+		"value": 5,
+		"sum": 1636
 	}, {
 		"name": "管理類(四)",
-		"value": 0
+		"value": 0,
+		"sum": 1636
 	}, {
 		"name": "語文類(二)",
-		"value": 7
+		"value": 7,
+		"sum": 1643
 	}],
 	"sum": 3096
 }, {
@@ -495,31 +606,40 @@
 	"value": 814,
 	"children": [{
 		"name": "機械群",
-		"value": 187
+		"value": 187,
+		"sum": 187
 	}, {
 		"name": "動力機械群",
-		"value": 115
+		"value": 115,
+		"sum": 302
 	}, {
 		"name": "機械類",
-		"value": 0
+		"value": 0,
+		"sum": 302
 	}, {
 		"name": "電子類",
-		"value": 2
+		"value": 2,
+		"sum": 304
 	}, {
 		"name": "電機類",
-		"value": 2
+		"value": 2,
+		"sum": 306
 	}, {
 		"name": "電機與電子群電機類",
-		"value": 175
+		"value": 175,
+		"sum": 481
 	}, {
 		"name": "土木與建築群",
-		"value": 33
+		"value": 33,
+		"sum": 514
 	}, {
 		"name": "化工群",
-		"value": 23
+		"value": 23,
+		"sum": 537
 	}, {
 		"name": "電機與電子群資電類",
-		"value": 277
+		"value": 277,
+		"sum": 814
 	}],
 	"sum": 3910
 }, {
@@ -528,22 +648,28 @@
 	"value": 716,
 	"children": [{
 		"name": "衛生與護理類",
-		"value": 32
+		"value": 32,
+		"sum": 32
 	}, {
 		"name": "醫事類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 33
 	}, {
 		"name": "護理類(一)",
-		"value": 2
+		"value": 2,
+		"sum": 35
 	}, {
 		"name": "食品群",
-		"value": 78
+		"value": 78,
+		"sum": 113
 	}, {
 		"name": "餐旅類",
-		"value": 0
+		"value": 0,
+		"sum": 113
 	}, {
 		"name": "餐旅群",
-		"value": 603
+		"value": 603,
+		"sum": 716
 	}],
 	"sum": 4626
 }, {
@@ -552,10 +678,12 @@
 	"value": 106,
 	"children": [{
 		"name": "農業群",
-		"value": 96
+		"value": 96,
+		"sum": 96
 	}, {
 		"name": "水產群",
-		"value": 10
+		"value": 10,
+		"sum": 106
 	}],
 	"sum": 4732
 }, {
@@ -584,49 +712,64 @@
 	"value": 1680,
 	"children": [{
 		"name": "商業與管理群",
-		"value": 674
+		"value": 674,
+		"sum": 674
 	}, {
 		"name": "家政群幼保類",
-		"value": 96
+		"value": 96,
+		"sum": 770
 	}, {
 		"name": "幼保類",
-		"value": 2
+		"value": 2,
+		"sum": 772
 	}, {
 		"name": "外語群英語類",
-		"value": 111
+		"value": 111,
+		"sum": 883
 	}, {
 		"name": "設計群",
-		"value": 406
+		"value": 406,
+		"sum": 1289
 	}, {
 		"name": "設計類(二)",
-		"value": 6
+		"value": 6,
+		"sum": 1295
 	}, {
 		"name": "家政群生活應用類",
-		"value": 242
+		"value": 242,
+		"sum": 1537
 	}, {
 		"name": "語文類(一)",
-		"value": 8
+		"value": 8,
+		"sum": 1545
 	}, {
 		"name": "外語群日語類",
-		"value": 34
+		"value": 34,
+		"sum": 1579
 	}, {
 		"name": "藝術群影視類",
-		"value": 62
+		"value": 62,
+		"sum": 1641
 	}, {
 		"name": "工程與管理類",
-		"value": 6
+		"value": 6,
+		"sum": 1647
 	}, {
 		"name": "管理類(一)",
-		"value": 0
+		"value": 0,
+		"sum": 1647
 	}, {
 		"name": "管理類(二)",
-		"value": 20
+		"value": 20,
+		"sum": 1667
 	}, {
 		"name": "管理類(四)",
-		"value": 9
+		"value": 9,
+		"sum": 1676
 	}, {
 		"name": "語文類(二)",
-		"value": 4
+		"value": 4,
+		"sum": 1680
 	}],
 	"sum": 3274
 }, {
@@ -635,31 +778,40 @@
 	"value": 740,
 	"children": [{
 		"name": "機械群",
-		"value": 185
+		"value": 185,
+		"sum": 185
 	}, {
 		"name": "動力機械群",
-		"value": 83
+		"value": 83,
+		"sum": 268
 	}, {
 		"name": "機械類",
-		"value": 0
+		"value": 0,
+		"sum": 268
 	}, {
 		"name": "電子類",
-		"value": 2
+		"value": 2,
+		"sum": 270
 	}, {
 		"name": "電機類",
-		"value": 0
+		"value": 0,
+		"sum": 270
 	}, {
 		"name": "電機與電子群電機類",
-		"value": 141
+		"value": 141,
+		"sum": 411
 	}, {
 		"name": "土木與建築群",
-		"value": 48
+		"value": 48,
+		"sum": 459
 	}, {
 		"name": "化工群",
-		"value": 19
+		"value": 19,
+		"sum": 478
 	}, {
 		"name": "電機與電子群資電類",
-		"value": 262
+		"value": 262,
+		"sum": 740
 	}],
 	"sum": 4014
 }, {
@@ -668,22 +820,28 @@
 	"value": 834,
 	"children": [{
 		"name": "衛生與護理類",
-		"value": 47
+		"value": 47,
+		"sum": 47
 	}, {
 		"name": "醫事類(一)",
-		"value": 1
+		"value": 1,
+		"sum": 48
 	}, {
 		"name": "護理類(一)",
-		"value": 3
+		"value": 3,
+		"sum": 51
 	}, {
 		"name": "食品群",
-		"value": 98
+		"value": 98,
+		"sum": 149
 	}, {
 		"name": "餐旅類",
-		"value": 6
+		"value": 6,
+		"sum": 155
 	}, {
 		"name": "餐旅群",
-		"value": 679
+		"value": 679,
+		"sum": 834
 	}],
 	"sum": 4848
 }, {
@@ -692,10 +850,12 @@
 	"value": 113,
 	"children": [{
 		"name": "農業群",
-		"value": 106
+		"value": 106,
+		"sum": 106
 	}, {
 		"name": "水產群",
-		"value": 7
+		"value": 7,
+		"sum": 113
 	}],
 	"sum": 4961
 }]
