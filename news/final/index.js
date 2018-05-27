@@ -39,7 +39,7 @@ yLine.call(function(g){
     g.call(axis);
 });
 
-d3.json("http://ghost.cs.nccu.edu.tw/~s10329/vis/news/quota.json", function(err, data) {
+d3.json("./quota.json", function(err, data) {
     // console.log(err);
     console.log(data);
     let g = svg.append('g').attr('class', 'bar');
