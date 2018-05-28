@@ -10,12 +10,10 @@ var height = 600 - margin.top - margin.bottom;
 var svg = d3.select('#svg');
 var xLine = svg.append("g").attr("class", "x axis").attr("transform", `translate(${margin.left}, ${height+margin.top})`);
 var yLine = svg.append("g").attr("class", "y axis").attr("transform", `translate(${margin.left}, ${margin.top})`);
-var bar = svg.append('g').attr('class', 'bar');
 var tip = d3.tip().attr('class', 'd3-tip').offset([-10, 0]).html(function(d) {
     return `<strong>${d.name} ${d.value} ${d.sum}</strong>`;
 });
 svg.call(tip);
-
 
 var xScale = d3.scale.ordinal()
 .domain([103, 104, 105, 106, 107])
@@ -29,8 +27,8 @@ function setScale(data) {
     yScale = d3.scale.linear().domain([0, max]).range([0, height]);
     y = d3.scale.linear().domain([0, max]).range([height, 0]);
 
-    xLine.call(d3.svg.axis().scale(xScale).orient("bottom"));
-    yLine.call(d3.svg.axis().scale(y).orient("left"));
+    xLine.transition().duration(500).call(d3.svg.axis().scale(xScale).orient("bottom"));
+    yLine.transition().duration(500).call(d3.svg.axis().scale(y).orient("left"));
 }
 
 var colors = d3.scale.category10();
@@ -43,13 +41,39 @@ function setColor(name) {
 }
 
 var bigData;
-function appendData(data, clickAction) {
+var nowTitle = "";
+function appendLittle(data) {
     console.log("append");
     console.log(data);
     setScale(data);
-    svg.selectAll('.bar').remove();
 
-    var rects = svg.append('g').attr('class', 'bar')
+    svg.selectAll(`rect[id="${nowTitle}"]`)
+    .transition()
+    .duration(500)
+    .attr({
+        'y': function(d) {
+            return y(d.value)+margin.top;
+        },
+        'height': function(d) {
+            return yScale(d.value);
+        }
+    });
+    svg.selectAll(`rect:not([id="${nowTitle}"])`)
+    .transition()
+    .duration(500)
+    .attr({
+        x: -100,
+        width: 0,
+        y: 0
+    });
+
+    svg.selectAll('.bar')
+    .transition()
+    .duration(1000)
+    .style('opacity', 0)
+    .remove();
+
+    svg.append('g').attr('class', 'bar')
     .selectAll('rect')
     .data(data)
     .enter()
@@ -68,55 +92,123 @@ function appendData(data, clickAction) {
         'height': function(d) {
             return yScale(d.value);
         },
-        'fill': function(d, i){return setColor(d.name)}
+        'fill': function(d, i){return setColor(d.name)},
+        "opacity": 0
     })
     .on('mouseover', tip.show)
-    .on('mouseout', tip.hide);
-    if( clickAction=="IN" ) {
-        $('#return').hide();
-        rects.on('click', function(d) {
-            if( !d.children ) {
-                let data = [];
-                let name = d.name;
-                for( let i=0; i<bigData.length; i++ ) {
-                    if( bigData[i].name==name) {
-                        let copy = Object.assign({}, bigData[i]);
-                        copy.sum = copy.value;
-                        data.push(copy);
-                    }
-                }
-                console.log(data);
-                appendData(data, false);
+    .on('mouseout', tip.hide)
+    .transition()
+    .duration(1000)
+    .attr('opacity', 1);
+}
 
+function appendBig(data, clickAction) {
+    console.log("append");
+    console.log(data);
+    setScale(data);
+
+    if( nowTitle ) {
+        let scale = {};
+        for( let i=0; i<data.length; i++ ) {
+            if( data[i].name==nowTitle ) {
+                scale[data[i].year] = {value: data[i].value, sum: data[i].sum};
             }
-            else {
-                let data = [];
-                let name = d.name;
-                for( let i=0; i<bigData.length; i++ ) {
-                    if( bigData[i].name==name) {
-                        let year = bigData[i].year;
-                        let child = bigData[i].children.slice();
-                        for( let j=0; j<child.length; j++ ) {
-                            data.push( Object.assign({ "year": year }, child[j]) );
-                        }
-                    }
-                }
-                console.log(data);
-                appendData(data, "OUT");
+        }
+        console.log(scale);
+
+        svg.selectAll(`rect`)
+        .transition()
+        .duration(500)
+        .attr({
+            'y': function(d) {
+                return y(scale[d.year].sum) + margin.top;
+            },
+            'height': function(d) {
+                return yScale(scale[d.year].value);
             }
         });
+        nowTitle = "";
+
+        svg.selectAll('.bar')
+        .transition()
+        .duration(1000)
+        .style('opacity', 0)
+        .remove();
     }
     else {
-        $('#return').show();
+        svg.selectAll('.bar')
+        .transition()
+        .duration(1000)
+        .style('opacity', 0)
+        .remove();
     }
+
+
+    svg.append('g').attr('class', 'bar')
+    .selectAll('rect')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr({
+        'x': function(d) {
+            return xScale(d.year) + margin.left + margin.right;
+        },
+        'y': function(d) {
+            return y(d.sum) + margin.top;
+        },
+        'id': function(d) {
+            return d.name;
+        },
+        'width': 130,
+        'height': function(d) {
+            return yScale(d.value);
+        },
+        'fill': function(d, i){return setColor(d.name)},
+        "opacity": 0
+    })
+    .on('mouseover', tip.show)
+    .on('mouseout', tip.hide)
+    .on('click', function(d) {
+        let data = [];
+        if( !d.children ) {
+            let name = d.name;
+            for( let i=0; i<bigData.length; i++ ) {
+                if( bigData[i].name==name) {
+                    let copy = Object.assign({}, bigData[i]);
+                    copy.sum = copy.value;
+                    data.push(copy);
+                }
+            }
+            console.log(data);
+            nowTitle = name;
+        }
+        else {
+            let name = d.name;
+            for( let i=0; i<bigData.length; i++ ) {
+                if( bigData[i].name==name) {
+                    let year = bigData[i].year;
+                    let child = bigData[i].children.slice();
+                    for( let j=0; j<child.length; j++ ) {
+                        data.push( Object.assign({ "year": year }, child[j]) );
+                    }
+                }
+            }
+            console.log(data);
+            nowTitle = name;
+        }
+        appendLittle(data);
+    })
+    .transition()
+    .duration(1000)
+    .attr('opacity', 1);
 }
 
 $('#return').on('click', function() {
-    appendData(bigData, "IN");
+    appendBig(bigData);
 })
 d3.json("http://ghost.cs.nccu.edu.tw/~s10329/vis/news/quota.json", function(err, data) {
     // console.log(err);
     bigData = data;
-    appendData(data, "IN");
+    appendBig(data);
 
 });
