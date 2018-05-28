@@ -11,7 +11,7 @@ var svg = d3.select('#svg');
 var xLine = svg.append("g").attr("class", "x axis").attr("transform", `translate(${margin.left}, ${height+margin.top})`);
 var yLine = svg.append("g").attr("class", "y axis").attr("transform", `translate(${margin.left}, ${margin.top})`);
 var tip = d3.tip().attr('class', 'd3-tip').offset([-10, 0]).html(function(d) {
-    return `<strong>${d.name} ${d.value} ${d.sum}</strong>`;
+    return `<strong>${d.name}<br>招生名額：${d.value}<br>總計：${d.sum}</strong>`;
 });
 svg.call(tip);
 
