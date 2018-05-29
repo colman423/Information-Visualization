@@ -64,6 +64,7 @@ function toggleSchoolCate(common, tech) {
 }
 
 var yScale, y;
+var isBig = true;;
 
 function setScale(data) {
     // var max = d3.max(data, function(d) {return d.sum;});
@@ -76,8 +77,14 @@ function setScale(data) {
     }
     for( let i=0; i<data.length; i++ ) {
         let cate = data[i].school;
-        // console.log(maxScale[data[i].year][cate])
-        maxScale[data[i].year][cate] += data[i].value;
+        if( isBig ) {
+            if(checkCate(data[i].name[1])) {
+                maxScale[data[i].year][cate] += data[i].value;;
+            }
+        }
+        else {
+            maxScale[data[i].year][cate] += data[i].value;
+        }
     }
     let maxData = [];
     for( let d in maxScale ) {
@@ -105,6 +112,7 @@ function setColor(name) {
 var bigData;
 var nowTitle = "";
 function appendLittle(data) {
+    isBig = false;
     $('.menu#big').hide();
     $('.menu#small').show();
     console.log("append");
@@ -171,6 +179,7 @@ function appendLittle(data) {
 }
 
 function appendBig(data) {
+    isBig = true;
     $('.menu#big').show();
     $('.menu#small').hide();
     console.log("append");
