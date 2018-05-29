@@ -17,16 +17,38 @@
 </head>
 <body>
     <div class="container">
-        <button id="return">RETURN</button>
-        <div class="form-group mt-3">
-            <input type="checkbox" class="checkbox">大學</input>
-            <input type="checkbox" class="checkbox">科大</input>
+        <div class="menu" id="small">
+            <button id="return" class="btn btn-success">RETURN</button>
         </div>
-        <div class="form-group mt-3">
-            <input type="checkbox" class="checkbox">第一類組</input>
-            <input type="checkbox" class="checkbox">第二類組</input>
-            <input type="checkbox" class="checkbox">第三類組</input>
-            <input type="checkbox" class="checkbox">第四類組</input>
+        <div class="menu" id="big">
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input school" type="checkbox" id="common" checked>
+                    <label class="form-check-label" for="common"> 大學</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input school" type="checkbox" id="tech">
+                    <label class="form-check-label" for="tech"> 科大</label>
+                </div>
+            </div>
+            <div class="mt-1">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input category" type="checkbox" id="一" checked>
+                    <label class="form-check-label" for="一">第一類組</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input category" type="checkbox" id="二" checked>
+                    <label class="form-check-label" for="二">第二類組</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input category" type="checkbox" id="三" checked>
+                    <label class="form-check-label" for="三">第三類組</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input category" type="checkbox" id="四" checked>
+                    <label class="form-check-label" for="四">第四類組</label>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
