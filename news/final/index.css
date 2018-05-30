@@ -1,4 +1,6 @@
-@import('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css')
+text.axis-label {
+    font-size: 20px;
+}
 
 .funkyradio div {
   clear: both;
