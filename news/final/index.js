@@ -31,27 +31,27 @@ var xScale = d3.scale.ordinal()
 .domain([103, 104, 105, 106, 107])
 .rangeRoundBands([0, width]);
 var xCommon = 0;
-var xTech = 130;
-var wCommon = 130;
+var xTech = 110;
+var wCommon = 110;
 var wTech = 0;
 function toggleSchoolCate(common, tech) {
     if( common && tech ) {
-        xTech = 70;
-        wCommon = 60;
-        wTech = 60;
+        xTech = 65;
+        wCommon = 55;
+        wTech = 55;
     }
     else if( common ) {
-        xTech = 130;
-        wCommon = 130;
+        xTech = 110;
+        wCommon = 110;
         wTech = 0;
     }
     else if( tech ) {
         xTech = 0;
         wCommon = 0;
-        wTech = 130;
+        wTech = 110;
     }
     else {
-        xTech = 130;
+        xTech = 110;
         wCommon = 0;
         wTech = 0;
     }
@@ -141,7 +141,7 @@ function appendLittle(data) {
         'y': function(d) {
             return y(d.value)+margin.top;
         },
-        width: 130,
+        width: 110,
         'height': function(d) {
             return yScale(d.value);
         }
@@ -177,7 +177,7 @@ function appendLittle(data) {
         'id': function(d) {
             return d.name;
         },
-        'width': 130,
+        'width': 110,
         'height': function(d) {
             return yScale(d.value);
         },
