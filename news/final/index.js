@@ -2,14 +2,26 @@ var margin = {
     top: 60,
     right: 10,
     bottom: 30,
-    left: 60
+    left: 100
 };
 var width = 800 - margin.left - margin.right;
 var height = 600 - margin.top - margin.bottom;
 
 var svg = d3.select('#svg');
 var xLine = svg.append("g").attr("class", "x axis").attr("transform", `translate(${margin.left}, ${height+margin.top})`);
+svg.append("text").text("年度").attr({
+    "transform": `translate(${width/2+margin.left-margin.right}, ${height+margin.top+45})`,
+    "class": "axis-label"
+});
 var yLine = svg.append("g").attr("class", "y axis").attr("transform", `translate(${margin.left}, ${margin.top})`);
+svg.append("text").text("招生").attr({
+    "transform": `translate(0, ${height/2+margin.top})`,
+    "class": "axis-label"
+});
+svg.append("text").text("人數").attr({
+    "transform": `translate(0, ${height/2+margin.top+25})`,
+    "class": "axis-label"
+});
 var tip = d3.tip().attr('class', 'd3-tip').offset([-10, 0]).html(function(d) {
     return `<strong>${d.name}<br>招生名額：${d.value}<br>總計：${d.sum}</strong>`;
 });
