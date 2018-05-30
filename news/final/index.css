@@ -76,38 +76,26 @@ text.axis-label {
   box-shadow: 0 0 0 3px #999;
 }
 
-.funkyradio-default input[type="radio"]:checked ~ label:before,
-.funkyradio-default input[type="checkbox"]:checked ~ label:before {
-  color: #333;
-  background-color: #ccc;
+.funkyradio-one input[type="radio"]:checked ~ label:before,
+.funkyradio-one input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: rgb(255, 200, 13);
 }
 
-.funkyradio-primary input[type="radio"]:checked ~ label:before,
-.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+.funkyradio-two input[type="radio"]:checked ~ label:before,
+.funkyradio-two input[type="checkbox"]:checked ~ label:before {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #7fb0de;
 }
 
-.funkyradio-success input[type="radio"]:checked ~ label:before,
-.funkyradio-success input[type="checkbox"]:checked ~ label:before {
+.funkyradio-three input[type="radio"]:checked ~ label:before,
+.funkyradio-three input[type="checkbox"]:checked ~ label:before {
   color: #fff;
-  background-color: #5cb85c;
+  background-color: #ec7f74;
 }
 
-.funkyradio-danger input[type="radio"]:checked ~ label:before,
-.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+.funkyradio-four input[type="radio"]:checked ~ label:before,
+.funkyradio-four input[type="checkbox"]:checked ~ label:before {
   color: #fff;
-  background-color: #d9534f;
-}
-
-.funkyradio-warning input[type="radio"]:checked ~ label:before,
-.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #f0ad4e;
-}
-
-.funkyradio-info input[type="radio"]:checked ~ label:before,
-.funkyradio-info input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #5bc0de;
+  background-color: rgb(134,175,95);
 }

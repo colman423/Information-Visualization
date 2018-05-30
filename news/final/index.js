@@ -31,9 +31,9 @@ var xScale = d3.scale.ordinal()
 .domain([103, 104, 105, 106, 107])
 .rangeRoundBands([0, width]);
 var xCommon = 0;
-var xTech = 110;
-var wCommon = 110;
-var wTech = 0;
+var xTech = 65;
+var wCommon = 55;
+var wTech = 55;
 function toggleSchoolCate(common, tech) {
     if( common && tech ) {
         xTech = 65;
@@ -114,10 +114,10 @@ function setScale(data) {
 
 var colors = d3.scale.category10();
 function setColor(name) {
-    if( name=="第一類組" ) return colors(1);
-    else if( name=="第二類組" ) return colors(2);
-    else if( name=="第三類組" ) return colors(3);
-    else if( name=="第四類組" ) return colors(4);
+    if( name=="第一類組" ) return "rgb(255, 200, 13)";
+    else if( name=="第二類組" ) return "#7fb0de";
+    else if( name=="第三類組" ) return "#ec7f74";
+    else if( name=="第四類組" ) return "#86af5f";
     else return colors(name);
 }
 
@@ -131,7 +131,7 @@ function appendLittle(data) {
     console.log(data);
     setScale(data);
 
-    svg.selectAll(`rect.rect[id="${nowTitle}"]`)
+    svg.selectAll(`rect.rect[rel="${nowTitle}"]`)
     .transition()
     .duration(500)
     .attr({
@@ -146,7 +146,7 @@ function appendLittle(data) {
             return yScale(d.value);
         }
     });
-    svg.selectAll(`rect.rect:not([id="${nowTitle}"])`)
+    svg.selectAll(`rect.rect:not([rel="${nowTitle}"])`)
     .transition()
     .duration(500)
     .attr({
@@ -157,7 +157,7 @@ function appendLittle(data) {
 
     svg.selectAll('.bar')
     .transition()
-    .duration(1000)
+    .duration(600)
     .style('opacity', 0)
     .remove();
 
@@ -174,14 +174,14 @@ function appendLittle(data) {
         'y': function(d) {
             return y(d.sum) + margin.top;
         },
-        'id': function(d) {
+        'rel': function(d) {
             return d.name;
         },
         'width': 110,
         'height': function(d) {
             return yScale(d.value);
         },
-        'fill': function(d, i){return setColor(d.name)},
+        // 'fill': function(d, i){return setColor(d.name)},
         "opacity": 0
     })
     .on('mouseover', tip.show)
@@ -258,7 +258,7 @@ function appendBig(data) {
             }
             else return xScale(d.year) + margin.left + margin.right + xCommon;
         },
-        'id': function(d) {
+        'rel': function(d) {
             return d.name;
         },
         'width':function(d) {
@@ -267,7 +267,7 @@ function appendBig(data) {
             }
             else return wCommon;
         },
-        'fill': function(d, i){return setColor(d.name)},
+        // 'fill': function(d, i){return setColor(d.name)},
         "opacity": 0
     })
     .on('mouseover', tip.show)

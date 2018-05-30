@@ -1,0 +1,108 @@
+.rect[rel="第一類組"] {
+    fill: rgb(255, 200, 13);
+}
+.rect[rel="第二類組"] {
+    fill: #7fb0de;
+}
+.rect[rel="第三類組"] {
+    fill: #ec7f74;
+}
+.rect[rel="第四類組"] {
+    fill: rgb(134,175,95);
+}
+.rect[rel="商業與管理群"] {
+   fill: #fec6c7;
+}
+.rect[rel="家政群幼保類"] {
+   fill: #d1977f;
+}
+.rect[rel="幼保類"] {
+   fill: #bb4f59;
+}
+.rect[rel="外語群英語類"] {
+   fill: #ffab75;
+}
+.rect[rel="設計群"] {
+   fill: #c5a0cc;
+}
+.rect[rel="設計類(二)"] {
+   fill: #767e68;
+}
+.rect[rel="家政群生活應用類"] {
+   fill: #31af8b;
+}
+.rect[rel="語文類(一)"] {
+   fill: #5f98d7;
+}
+.rect[rel="外語群日語類"] {
+   fill: #ffbb8e;
+}
+.rect[rel="藝術群影視類"] {
+   fill: #ab99d5;
+}
+.rect[rel="工程與管理類"] {
+   fill: #9fd187;
+}
+.rect[rel="管理類(一)"] {
+   fill: #e9fd8f;
+}
+.rect[rel="管理類(二)"] {
+   fill: #8ffde9;
+}
+.rect[rel="管理類(四)"] {
+   fill: #fde98f;
+}
+.rect[rel="語文類(二)"] {
+   fill: #86a558;
+}
+.rect[rel="機械群"] {
+   fill: #fde98f;
+}
+.rect[rel="動力機械群"] {
+   fill: #a97b50;
+}
+.rect[rel="機械類"] {
+   fill: #98ffde;
+}
+.rect[rel="電子類"] {
+   fill: #bb4f59;
+}
+.rect[rel="電機類"] {
+   fill: #dad479;
+}
+.rect[rel="電機與電子群電機類"] {
+   fill: #d29aba;
+}
+.rect[rel="土木與建築群"] {
+   fill: #ff8f76;
+}
+.rect[rel="化工群"] {
+   fill: #fde98f;
+}
+.rect[rel="電機與電子群資電類"] {
+   fill: #19addc;
+}
+.rect[rel="衛生與護理類"] {
+   fill: #bb4f59;
+}
+.rect[rel="醫事類(一)"] {
+   fill: #7ed8cb;
+}
+.rect[rel="護理類(一)"] {
+   fill: #767e68;
+}
+.rect[rel="食品群"] {
+   fill: #ffb4b2;
+}
+.rect[rel="餐旅類"] {
+   fill: #9fd187;
+}
+.rect[rel="餐旅群"] {
+   fill: #fde98f;
+}
+.rect[rel="農業群"] {
+   fill: #95948e;
+}
+.rect[rel="水產群"] {
+   fill: #d1977f;
+}
