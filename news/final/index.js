@@ -44,7 +44,7 @@ function toggleSchoolCate(common, tech) {
         wTech = 0;
     }
     svg.selectAll('.bar')
-    .selectAll('rect')
+    .selectAll('rect.rect')
     .transition()
     .attr({
         'x': function(d) {
@@ -119,7 +119,7 @@ function appendLittle(data) {
     console.log(data);
     setScale(data);
 
-    svg.selectAll(`rect[id="${nowTitle}"]`)
+    svg.selectAll(`rect.rect[id="${nowTitle}"]`)
     .transition()
     .duration(500)
     .attr({
@@ -134,7 +134,7 @@ function appendLittle(data) {
             return yScale(d.value);
         }
     });
-    svg.selectAll(`rect:not([id="${nowTitle}"])`)
+    svg.selectAll(`rect.rect:not([id="${nowTitle}"])`)
     .transition()
     .duration(500)
     .attr({
@@ -155,6 +155,7 @@ function appendLittle(data) {
     .enter()
     .append('rect')
     .attr({
+        'class': 'rect',
         'x': function(d) {
             return xScale(d.year) + margin.left + margin.right;
         },
@@ -177,7 +178,6 @@ function appendLittle(data) {
     .duration(1000)
     .attr('opacity', 1);
 }
-
 function appendBig(data) {
     isBig = true;
     $('.menu#big').show();
@@ -195,7 +195,7 @@ function appendBig(data) {
         }
         console.log(scale);
 
-        svg.selectAll(`rect`)
+        svg.selectAll(`rect.rect`)
         .transition()
         .duration(500)
         .attr({
@@ -239,6 +239,7 @@ function appendBig(data) {
     .enter()
     .append('rect')
     .attr({
+        'class': 'rect',
         'x': function(d) {
             if( d.school=="科大" ) {
                 return xScale(d.year) + margin.left + margin.right + xTech;
@@ -314,9 +315,17 @@ function appendBig(data) {
     .attr('opacity', 1);
 }
 
-$('#return').on('click', function() {
-    appendBig(bigData);
-})
+svg.append("rect")
+.attr({"class": "overlay" , "width": width , "height": height, "opacity": 0})
+.on({
+    "click":  function() {
+        console.log(isBig);
+        if( !isBig) {
+            appendBig(bigData);
+        }
+     }
+});
+
 d3.json("./quota.json", function(err, data) {
     // console.log(err);
     bigData = data;

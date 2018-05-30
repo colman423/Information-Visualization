@@ -15,44 +15,48 @@
     <title>stack bar chart</title>
 </head>
 <body style="background-color: transparent;">
-    <div class="container text-center mt-1">
-        <div class="menu" id="small">
-            <button id="return" class="btn btn-success">RETURN</button>
-        </div>
-        <div class="menu" id="big">
-            <div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input school" type="checkbox" id="common" checked>
-                    <label class="form-check-label" for="common"> 大學</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input school" type="checkbox" id="tech">
-                    <label class="form-check-label" for="tech"> 科大</label>
-                </div>
-            </div>
-            <div class="mt-1">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input category" type="checkbox" id="一" checked>
-                    <label class="form-check-label" for="一">第一類組</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input category" type="checkbox" id="二" checked>
-                    <label class="form-check-label" for="二">第二類組</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input category" type="checkbox" id="三" checked>
-                    <label class="form-check-label" for="三">第三類組</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input category" type="checkbox" id="四" checked>
-                    <label class="form-check-label" for="四">第四類組</label>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container text-center">
-        <svg id="svg" width="800" height="600" class="m-auto">
-        </svg>
+        <div class="row">
+            <div class="col-10">
+                <svg id="svg" width="800" height="600" class="m-auto">
+                </svg>
+            </div>
+            <div class="col-2 mt-5">
+                <div class="menu" id="small">
+                    <!-- <button id="return" class="btn btn-success">RETURN</button> -->
+                </div>
+                <div class="menu" id="big">
+                    <div class="mb-3">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary btn-lg active">
+                                <input type="checkbox" name="options" class="school" id="common" autocomplete="off" checked> 大學
+                            </label>
+                            <label class="btn btn-secondary btn-lg">
+                                <input type="checkbox" name="options" class="school" id="tech" autocomplete="off"> 科大
+                            </label>
+                        </div>
+                    </div>
+                    <div class="funkyradio">
+                        <div class="funkyradio-primary">
+                            <input class="category" type="checkbox" name="checkbox" id="一" checked/>
+                            <label class="label-lg" for="一">第一類組</label>
+                        </div>
+                        <div class="funkyradio-warning">
+                            <input class="category" type="checkbox" name="checkbox" id="二" checked/>
+                            <label for="二">第二類組</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input class="category" type="checkbox" name="checkbox" id="三" checked/>
+                            <label for="三">第三類組</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input class="category" type="checkbox" name="checkbox" id="四" checked/>
+                            <label for="四">第四類組</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./index.js"></script>

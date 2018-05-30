@@ -1,6 +1,6 @@
 
 body {
-  font: 10px sans-serif;
+  /* font: 10px sans-serif; */
 }
 
 .axis path,
@@ -19,7 +19,7 @@ body {
 }
 
 .x.axis path {
-  display: none;
+  /* display: none; */
 }
 
 .d3-tip {
