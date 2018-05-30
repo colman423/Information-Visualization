@@ -23,7 +23,7 @@ svg.append("text").text("人數").attr({
     "class": "axis-label"
 });
 var tip = d3.tip().attr('class', 'd3-tip').offset([-10, 0]).html(function(d) {
-    return `<strong>${d.name}<br>招生名額：${d.value}<br>總計：${d.sum}</strong>`;
+    return `<strong>${d.name}<br>招生名額：${d.value}</strong>`;
 });
 svg.call(tip);
 
@@ -275,9 +275,10 @@ function appendBig(data) {
     .on('click', function(d) {
         let data = [];
         if( !d.children ) {
+            // console.log("no child");
             let name = d.name;
             for( let i=0; i<bigData.length; i++ ) {
-                if( bigData[i].name==name) {
+                if( bigData[i].name==name && bigData[i].school=="大學") {
                     let copy = Object.assign({}, bigData[i]);
                     copy.sum = copy.value;
                     data.push(copy);
