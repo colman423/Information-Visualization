@@ -10,7 +10,7 @@ var height = 600 - margin.top - margin.bottom;
 var svg = d3.select('#svg');
 var xLine = svg.append("g").attr("class", "x axis").attr("transform", `translate(${margin.left}, ${height+margin.top})`);
 svg.append("text").text("年度").attr({
-    "transform": `translate(${width/2+margin.left-margin.right}, ${height+margin.top+45})`,
+    "transform": `translate(${width+margin.left+20}, ${height+margin.top+10})`,
     "class": "axis-label"
 });
 var yLine = svg.append("g").attr("class", "y axis").attr("transform", `translate(${margin.left}, ${margin.top})`);
@@ -329,7 +329,7 @@ function appendBig(data) {
 }
 
 svg.append("rect")
-.attr({"class": "overlay" , "width": width , "height": height, "opacity": 0})
+.attr({"class": "overlay" , "width": 1000 , "height": 700, "opacity": 0})
 .on({
     "click":  function() {
         console.log(isBig);
